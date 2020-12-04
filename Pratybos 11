@@ -1,0 +1,25 @@
+#include<cstdio>
+ /*
+ bent jau man cout ir cin patogiau, bet assuminu, kad negalima pridedineti biblioteku ir pan
+ nes tada might as well nuo pamatu perrasyt programa
+ ka daro programa? papraso skaiciaus ir atsako, kiek skaitmenu sudaro ta skaiciu.
+ taip pat del papildomos, nieko nedarancios dalies ji iskart nepasibaigia, o laukia tolimesnio ivedimo.
+ kadangi jis niekur toliau nenaudojamas, as ji tsg isdeletinau, kaip ir didele dali kitu eiluciu
+ */
+ int KiekA(long a)
+     {
+    if(a<0)
+    a=-a;
+int A;
+for(A=0;a>0;a/=10,A++);
+     return A;
+     }
+ int main()
+     {
+ long A;
+ printf( "Ivesk sveika skaiciu ");
+ scanf("%ld",&A);
+ A= KiekA(A);
+ printf("skaicius turi %ld skaitm.",A);
+ return 0;
+     }
